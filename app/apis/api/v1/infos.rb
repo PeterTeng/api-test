@@ -3,7 +3,7 @@ module API
     class Infos < Grape::API
       resource :infos do
         get do
-          present Info.all, with: Entity::V1::UsersEntity
+          present Info.all, with: Entity::V1::InfosEntity
         end
       end
     end
