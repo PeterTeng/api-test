@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'grape'
 gem 'grape-entity'
+gem 'haml-rails'
 
 gem 'rails', '4.2.6'
 gem 'sqlite3'
