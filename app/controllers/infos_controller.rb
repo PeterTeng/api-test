@@ -11,12 +11,12 @@ class InfosController < ApplicationController
   end
 
   def new
-    @infos = Info.new
+    @info = Info.new
   end
 
   def create
-    @infos = Info.create(info_params)
-    if @infos.save
+    @info = Info.create(info_params)
+    if @info.save
       redirect_to info_path
     else
       render 'new'
@@ -28,24 +28,23 @@ class InfosController < ApplicationController
   end
 
   def update
-    if @infos.update(info_params)
-      redirect_to info_path
+    if @info.update(info_params)
     else
       render 'edit'
     end
   end
 
   def destroy
-    @infos.destroy
+    @info.destroy
     redirect_to info_path
   end
 
   private
     def info_params
-      params.require(:info).permit(:id)
+      params.require(:info).permit(:id, :name, :category, :address)
     end
 
     def set_info
-      @infos = Info.find(params[:id])
+      @info = Info.find(params[:id])
     end
 end

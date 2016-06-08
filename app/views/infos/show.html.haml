@@ -2,10 +2,10 @@
   = notice
 %p
   Name:
-  = @infos.name
+  = @info.name
 %p
   Category:
-  = @infos.category
+  = @info.category
 
-= link_to 'Edit', edit_info_path(@infos)
+= link_to 'Edit', edit_info_path(@info)
 = link_to 'Back', infos_path
