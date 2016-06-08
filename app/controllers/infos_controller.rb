@@ -1,6 +1,6 @@
 class InfosController < ApplicationController
 
-  before_action :set_info, only: [:show,:update,:edit,:delete]
+  before_action :set_info, only: [:show,:update,:edit,:destroy]
 
   def index
     @infos = Info.all
