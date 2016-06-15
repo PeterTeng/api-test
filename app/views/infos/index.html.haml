@@ -1,0 +1,17 @@
+%h1
+  Listing Infos
+%table
+  %thead
+    %tr
+      %th Name
+      %th Category
+      %th Address
+  %tbody
+    - @infos.each do |i|
+      %tr
+        %td
+          = i.name
+        %td
+          = i.category
+        %td
+          = i.address
